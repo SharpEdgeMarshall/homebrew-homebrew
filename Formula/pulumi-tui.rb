@@ -7,6 +7,7 @@ class PulumiTui < Formula
   sha256 "dcf4b0e3dbc3a4b86a9f6a4164e22b553021f67e1a4ab2ef8b80c60c6e728b3c"
   license "Apache-2.0"
 
+  depends_on "libyaml"
   depends_on "python@3.15"
 
   resource "annotated-types" do
@@ -179,6 +180,6 @@ class PulumiTui < Formula
   end
 
   test do
-    true
+    assert_match version.to_s, shell_output("#{bin}/pltui --version")
   end
 end

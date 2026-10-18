@@ -7,6 +7,12 @@ class PulumiTui < Formula
   sha256 "dcf4b0e3dbc3a4b86a9f6a4164e22b553021f67e1a4ab2ef8b80c60c6e728b3c"
   license "Apache-2.0"
 
+  bottle do
+    root_url "https://github.com/SharpEdgeMarshall/homebrew-tap/releases/download/pulumi-tui-0.1.1"
+    sha256 cellar: :any, arm64_tahoe:  "ef9eef0f51556090d21d34a1b422e79cff4400b3674ae58e2d0d0bbb4836d1a1"
+    sha256 cellar: :any, x86_64_linux: "d5b302e40502c253d45152e9f0a750386f4daa38dcb768e6a86b0f77fa48a2c3"
+  end
+
   depends_on "libyaml"
   depends_on "pydantic" => :no_linkage
   depends_on "python@3.15"

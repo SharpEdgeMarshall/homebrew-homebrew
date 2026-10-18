@@ -19,6 +19,12 @@ class PulumiTui < Formula
 
   pypi_packages exclude_packages: ["pydantic"]
 
+  def caveats
+    <<~EOS
+      You can launch pulumi-tui by running the command `pltui` in your terminal.
+    EOS
+  end
+
   resource "click" do
     url "https://files.pythonhosted.org/packages/c7/0e/7fa0ef50764b67090eca4114772a2abf8b6148198475e54c660b97caeee6/click-8.5.0.tar.gz"
     sha256 "ba0d2089de75ea0310e2dde03160e6ca10009947fb95a182f9b54021bb272e34"
